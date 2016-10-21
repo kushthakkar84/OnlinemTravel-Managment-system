@@ -67,6 +67,7 @@
   <ItemGroup>
     <Content Include="3.jpg" />
     <Content Include="5.jpg" />
+    <Content Include="booking.aspx" />
     <Content Include="homepage.aspx" />
     <Content Include="m1.jpg" />
     <Content Include="s1.jpg" />
@@ -74,6 +75,13 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="booking.aspx.cs">
+      <DependentUpon>booking.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="booking.aspx.designer.cs">
+      <DependentUpon>booking.aspx</DependentUpon>
+    </Compile>
     <Compile Include="homepage.aspx.cs">
       <DependentUpon>homepage.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
