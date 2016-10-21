@@ -65,7 +65,12 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="3.jpg" />
+    <Content Include="5.jpg" />
     <Content Include="homepage.aspx" />
+    <Content Include="m1.jpg" />
+    <Content Include="s1.jpg" />
+    <Content Include="sabarmati-riverfront.jpg" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
