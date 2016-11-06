@@ -69,6 +69,7 @@
     <Content Include="5.jpg" />
     <Content Include="booking.aspx" />
     <Content Include="homepage.aspx" />
+    <Content Include="login.aspx" />
     <Content Include="m1.jpg" />
     <Content Include="s1.jpg" />
     <Content Include="sabarmati-riverfront.jpg" />
@@ -88,6 +89,13 @@
     </Compile>
     <Compile Include="homepage.aspx.designer.cs">
       <DependentUpon>homepage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="login.aspx.cs">
+      <DependentUpon>login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="login.aspx.designer.cs">
+      <DependentUpon>login.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
