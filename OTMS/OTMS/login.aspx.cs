@@ -14,14 +14,18 @@ namespace OTMS
         String conform_str, dropdown_str;
         protected void Page_Load(object sender, EventArgs e)
         {
-            
+            /*conform_str = (String)Request.QueryString["msg"];
+            if (conform_str == "false")
+            {
+                error_msg.Text = "please enter detail first!!!!!";
+            }*/
         }
-        protected void submit_btn_Click(Object sender, EventArgs e)
+        protected void Button1_Click(Object sender, EventArgs e)
         {
             
 
 
-            String usernm = Username.Text;
+            String usernm = UserName.Text;
             String passwd = Password.Text;
             String connstring = "Data Source=ABCD;initial catalog=OTMS;integrated security=true";
 
@@ -32,7 +36,7 @@ namespace OTMS
                 conn.Open();
                 SqlCommand command = new SqlCommand();
                 
-                String selectdata = "select * from login_details ;
+                String selectdata = "select * from login_details";
                 command.Connection = conn;
                 command.CommandText = selectdata;
 
@@ -47,7 +51,7 @@ namespace OTMS
 
                         flag = 1;
                         
-                            Session["username"] = Username.Text;
+                            Session["username"] = UserName.Text;
                             Session["password"] = Password.Text;
                             Response.Redirect("homepage.aspx");
                         //}
@@ -60,7 +64,7 @@ namespace OTMS
 
                 if (flag != 1)
                 {
-                    error_msg.Text = "Invalid Username or Password";
+                   /* error_msg.Text = "Invalid Username or Password";*/
                 }
 
             }

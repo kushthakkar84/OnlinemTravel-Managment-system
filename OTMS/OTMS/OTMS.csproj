@@ -72,6 +72,10 @@
     <Content Include="App_Data\OTMS_log.ldf">
       <DependentUpon>OTMS.mdf</DependentUpon>
     </Content>
+    <Content Include="App_Data\sample.mdf" />
+    <Content Include="App_Data\sample_log.ldf">
+      <DependentUpon>sample.mdf</DependentUpon>
+    </Content>
     <Content Include="booking.aspx" />
     <Content Include="css\sty2.css" />
     <Content Include="css\style.css" />
@@ -85,6 +89,7 @@
     <Content Include="sabarmati-riverfront.jpg" />
     <Content Include="test.aspx" />
     <Content Include="Web.config" />
+    <Content Include="WebForm1.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="booking.aspx.cs">
@@ -120,8 +125,12 @@
       <DependentUpon>test.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="test.aspx.designer.cs">
-      <DependentUpon>test.aspx</DependentUpon>
+    <Compile Include="WebForm1.aspx.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForm1.aspx.designer.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <PropertyGroup>

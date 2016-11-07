@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="login.aspx.cs" Inherits="OTMS.login" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="login.aspx.cs" Inherits="OTMS.login" %>
 
 
 <!DOCTYPE html>
@@ -33,21 +33,19 @@
     <div class="login-form">
      <h1>Login</h1>
      <div class="form-group ">
-       <input type="text" class="form-control" placeholder="Username " id="UserName">
-       <i class="fa fa-user"></i>
-     </div>
+         <asp:TextBox ID="UserName" runat="server" AutoPostBack="True"></asp:TextBox>
+&nbsp;</div>
      <div class="form-group log-status">
-       <input type="password" class="form-control" placeholder="Password" id="Password"><br />
+         <asp:TextBox ID="Password" runat="server" AutoPostBack="True"></asp:TextBox>
          <br />
-         <asp:Label ID="error_msg" runat="server"></asp:Label>
-&nbsp;<i class="fa fa-lock"></i><span class="alert">Invalid Credentials</span>
-      <a class="link" href="#">Lost your password?</a>
-     <button type="button" class="log-btn" runat="server"  ID="submit_btn" OnClick="submit_btn_Click">Log in</button>
-     
-
-         
-    
-   </div>
+         <br />
+         <div class="error_msg">
+        <asp:Label runat="server" style="color:red" ID="error_msg" Text=" "></asp:Label>
+             <asp:Button ID="Button1" runat="server" Text="Button" />
+             <br />
+        </div>
+&nbsp;<span class="alert">Invalid Credentials</span>
+      <a class="link" href="#">Lost your password?</a></div>
     
      
     
