@@ -22,12 +22,14 @@ namespace OTMS
         }
         protected void Button1_Click(Object sender, EventArgs e)
         {
-            
 
+
+            TextBox UserName = new TextBox();
+            TextBox Password = new TextBox();
 
             String usernm = UserName.Text;
             String passwd = Password.Text;
-            String connstring = "Data Source=ABCD;initial catalog=OTMS;integrated security=true";
+            String connstring = "Data Source=.;initial catalog=OTMS;integrated security=true";
 
             SqlConnection conn = new SqlConnection(connstring);
             try
