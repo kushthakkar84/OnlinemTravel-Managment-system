@@ -65,14 +65,25 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="21.jpg" />
     <Content Include="3.jpg" />
     <Content Include="5.jpg" />
+    <Content Include="App_Data\OTMS.mdf" />
+    <Content Include="App_Data\OTMS_log.ldf">
+      <DependentUpon>OTMS.mdf</DependentUpon>
+    </Content>
     <Content Include="booking.aspx" />
+    <Content Include="css\sty2.css" />
+    <Content Include="css\style.css" />
     <Content Include="homepage.aspx" />
+    <Content Include="js\index.js" />
+    <Content Include="js\jquery.min.js" />
     <Content Include="login.aspx" />
     <Content Include="m1.jpg" />
+    <Content Include="registration.aspx" />
     <Content Include="s1.jpg" />
     <Content Include="sabarmati-riverfront.jpg" />
+    <Content Include="test.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -98,6 +109,20 @@
       <DependentUpon>login.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="registration.aspx.cs">
+      <DependentUpon>registration.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="registration.aspx.designer.cs">
+      <DependentUpon>registration.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="test.aspx.cs">
+      <DependentUpon>test.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="test.aspx.designer.cs">
+      <DependentUpon>test.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
