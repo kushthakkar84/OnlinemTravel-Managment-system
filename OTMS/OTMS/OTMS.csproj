@@ -77,13 +77,17 @@
       <DependentUpon>sample.mdf</DependentUpon>
     </Content>
     <Content Include="booking.aspx" />
+    <Content Include="calendar.jpg" />
     <Content Include="css\sty2.css" />
     <Content Include="css\style.css" />
+    <Content Include="feedback.aspx" />
     <Content Include="homepage.aspx" />
     <Content Include="js\index.js" />
     <Content Include="js\jquery.min.js" />
     <Content Include="login.aspx" />
     <Content Include="m1.jpg" />
+    <Content Include="package.aspx" />
+    <Content Include="package_places.aspx" />
     <Content Include="registration.aspx" />
     <Content Include="s1.jpg" />
     <Content Include="sabarmati-riverfront.jpg" />
@@ -99,6 +103,13 @@
     <Compile Include="booking.aspx.designer.cs">
       <DependentUpon>booking.aspx</DependentUpon>
     </Compile>
+    <Compile Include="feedback.aspx.cs">
+      <DependentUpon>feedback.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="feedback.aspx.designer.cs">
+      <DependentUpon>feedback.aspx</DependentUpon>
+    </Compile>
     <Compile Include="homepage.aspx.cs">
       <DependentUpon>homepage.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -112,6 +123,20 @@
     </Compile>
     <Compile Include="login.aspx.designer.cs">
       <DependentUpon>login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="package.aspx.cs">
+      <DependentUpon>package.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="package.aspx.designer.cs">
+      <DependentUpon>package.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="package_places.aspx.cs">
+      <DependentUpon>package_places.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="package_places.aspx.designer.cs">
+      <DependentUpon>package_places.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="registration.aspx.cs">

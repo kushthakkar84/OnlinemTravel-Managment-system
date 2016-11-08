@@ -7,11 +7,12 @@ using System.Web.UI.WebControls;
 
 namespace OTMS
 {
-    public partial class booking : System.Web.UI.Page
+    public class booking : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
 
         }
+       
     }
 }
