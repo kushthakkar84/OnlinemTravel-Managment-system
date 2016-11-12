@@ -12,7 +12,7 @@
   text-decoration: underline;
   font-weight: bold;
   margin: auto;
-    width: 50%;
+    width: 35%;
     border: 3px solid green;
     padding: 10px;
         }
@@ -64,71 +64,48 @@
             Booking</th>
     </tr>
     <tr>
-        <td>    Booking ID</td>
-        <td>    
-            <asp:TextBox ID="book" runat="server"></asp:TextBox>
-        </td>
-        <td class="auto-style4">    
-            <asp:RequiredFieldValidator ErrorMessage="Required" ForeColor="Red" runat="server" ControlToValidate="book"></asp:RequiredFieldValidator>
-        </td>
-    </tr>
-    <tr>
-        <td class="auto-style2">
-            AgentName
-        </td>
-        <td class="auto-style2">
-            <asp:DropDownList ID="Agent" runat="server">
-            </asp:DropDownList>
-        </td>
-        <td class="auto-style5">
-            &nbsp;</td>
-    </tr>
-    <tr>
-        <td class="auto-style3">
-            CreateDate</td>
-        <td class="auto-style3">
-            <asp:Calendar ID="Calendar1" runat="server"></asp:Calendar>
-            
-        </td>
-        <td class="auto-style6">
-        </td>
-    </tr>
-    <tr>
-        <td class="auto-style1">
-            &nbsp;UpdateDate</td>
-        <td class="auto-style1">
-            <asp:Calendar ID="Calendar2" runat="server"></asp:Calendar>
-        </td>
-        <td class="auto-style7">
-            </td>
-    </tr>
-    <tr>
-        <td class="auto-style8">
-            Status</td>
-        <td class="auto-style8">
-            <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
-        </td>
-        <td class="auto-style9">
-            </td>
-    </tr>
-    
-    <tr>
         <td>    P_ID</td>
         <td>    
-            <asp:TextBox ID="p_id" runat="server"></asp:TextBox>
+            <asp:DropDownList ID="DropDownList1" runat="server">
+            </asp:DropDownList>
         </td>
-        <td class="auto-style4">    </td>
-    </tr>
         
-    <tr>
-        <td>
-        </td>
-        <td class="btn">
-            <asp:Button Text="Submit" runat="server"  />
-        </td>
-        <td class="auto-style4">
-        </td>
     </tr>
+    <tr>
+        <td class="auto-style2">
+            Package_Name</td>
+        <td class="auto-style2">
+            <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
+        </td>
+        
+    </tr>
+    <tr>
+        <td class="auto-style3">
+            Description</td>
+        <td class="auto-style3">
+            
+            <asp:TextBox ID="TextBox2" runat="server"></asp:TextBox>
+            
+        </td>
+        
+    </tr>
+    <tr>
+        <td class="auto-style1">
+            Journey Date</td>
+        <td class="auto-style1">
+            <asp:TextBox ID="TextBox3" runat="server"></asp:TextBox>
+        </td>
+        
+    </tr>
+        <tr>
+        <td class="auto-style1">
+            </td>
+        <td class="auto-style1">
+            <asp:Button ID="Button1" runat="server" Text="Submit" />
+        </td>
+        
+    </tr>
+    
 </table>
     </form>
 </body>

@@ -12,7 +12,7 @@
   text-decoration: underline;
   font-weight: bold;
   margin: auto;
-    width: 50%;
+    width: 55%;
     border: 3px solid green;
     padding: 10px;
         }
@@ -22,10 +22,15 @@
 	outline: none;
      }
 
+        .auto-style1 {
+            width: 202px;
+        }
+
     </style>
 </head>
 <body class="theme">
     <form id="form1" runat="server">
+        <asp:Label ID="msg" runat="server" Text=""></asp:Label>
     <table border="0" cellpadding="7" cellspacing="7">
     <tr>
         <th colspan="3">
@@ -37,7 +42,7 @@
         <td>    
             <asp:TextBox ID="Fnm" runat="server"></asp:TextBox>
         </td>
-        <td>    
+        <td class="auto-style1">    
             <asp:RequiredFieldValidator ErrorMessage="Required" ForeColor="Red" runat="server" ControlToValidate="Fnm"></asp:RequiredFieldValidator>
         </td>
     </tr>
@@ -46,10 +51,10 @@
             Username
         </td>
         <td>
-            <asp:TextBox ID="txtUsername" runat="server" />
+            <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
         </td>
-        <td>
-            <asp:RequiredFieldValidator ErrorMessage="Required" ForeColor="Red" ControlToValidate="txtUsername"
+        <td class="auto-style1">
+            <asp:RequiredFieldValidator ErrorMessage="Required" ForeColor="Red" ControlToValidate="TextBox1"
                 runat="server" />
         </td>
     </tr>
@@ -60,7 +65,7 @@
         <td>
             <asp:TextBox ID="txtPassword" runat="server" TextMode="Password" />
         </td>
-        <td>
+        <td class="auto-style1">
             <asp:RequiredFieldValidator ErrorMessage="Required" ForeColor="Red" ControlToValidate="txtPassword"
                 runat="server" />
         </td>
@@ -72,7 +77,7 @@
         <td>
             <asp:TextBox ID="txtConfirmPassword" runat="server" TextMode="Password" />
         </td>
-        <td>
+        <td class="auto-style1">
             <asp:CompareValidator ErrorMessage="Passwords do not match." ForeColor="Red" ControlToCompare="txtPassword"
                 ControlToValidate="txtConfirmPassword" runat="server" />
         </td>
@@ -84,7 +89,7 @@
         <td>
             <asp:TextBox ID="txtEmail" runat="server" />
         </td>
-        <td>
+        <td class="auto-style1">
             <asp:RequiredFieldValidator ErrorMessage="Required" Display="Dynamic" ForeColor="Red"
                 ControlToValidate="txtEmail" runat="server" />
             <asp:RegularExpressionValidator runat="server" Display="Dynamic" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*"
@@ -93,11 +98,15 @@
     </tr>
     <tr>
         <td>    Gender</td>
-        <td>    
-            <asp:RadioButton ID="Male" runat="server" Text="Male" />
-            <asp:RadioButton ID="Female" runat="server" Text="Female" />
+        <td>   <asp:RadioButtonList ID="RadioButtonList1" runat="server">
+            <asp:ListItem>Male</asp:ListItem>
+                    <asp:ListItem>Female</asp:ListItem>
+               </asp:RadioButtonList>
+                    
+                
+           
         </td>
-        <td>    </td>
+        <td class="auto-style1">    </td>
     </tr>
     <tr>
         <td>    Country</td>
@@ -111,7 +120,7 @@
                 <asp:ListItem></asp:ListItem>
             </asp:DropDownList>
         </td>
-        <td>    </td>
+        <td class="auto-style1">    </td>
     </tr>
     <tr>
         <td>    State</td>
@@ -119,15 +128,15 @@
             <asp:DropDownList ID="DropDownList2" runat="server">
             </asp:DropDownList>
         </td>
-        <td>    </td>
+        <td class="auto-style1">    </td>
     </tr>
     <tr>
         <td>    Zip Code</td>
         <td>    
-            <asp:TextBox ID="Zipcode" runat="server"></asp:TextBox>
+            <asp:TextBox ID="TextBox2" runat="server"></asp:TextBox>
         </td>
-        <td>    
-            <asp:RangeValidator ID="RangeValidator" ForeColor="Red" runat="server" ErrorMessage="Enter valid Zip Code" MaximumValue="999999" MinimumValue="100000" ControlToValidate="Zipcode"></asp:RangeValidator>
+        <td class="auto-style1">    
+            <asp:RangeValidator ID="RangeValidator" ForeColor="Red" runat="server" ErrorMessage="Enter valid Zip Code" MaximumValue="999999" MinimumValue="100000" ControlToValidate="TextBox2"></asp:RangeValidator>
         </td>
     </tr>
     <tr>
@@ -135,35 +144,48 @@
         <td>    
             <asp:TextBox ID="Age" runat="server"></asp:TextBox>
         </td>
-        <td>    
-            <asp:RangeValidator ID="RangeValidator1" runat="server" ErrorMessage="Age between 18-100" ForeColor="Red" ControlToValidate="Age"></asp:RangeValidator>
-        </td>
+        <td class="auto-style1">    
+       </td>
     </tr>
-    <tr>
-        <td>    C_ID</td>
-        <td>    
-            <asp:TextBox ID="C_ID" runat="server"></asp:TextBox>
-        </td>
-        <td>    </td>
-    </tr>
-    <tr>
-        <td>    P_ID</td>
-        <td>    
-            <asp:TextBox ID="P_ID" runat="server"></asp:TextBox>
-        </td>
-        <td>    </td>
-    </tr>
+    
         
     <tr>
         <td>
         </td>
         <td class="btn">
-            <asp:Button Text="Submit" runat="server"  />
+            <asp:Button Text="Submit" runat="server" ID="reg" OnClick="reg_Click"  />
+        </td>
+        <td class="auto-style1">
+        </td>
+    </tr>
+ <tr>
+        <td>
+        </td>
+        <td>            </td>
+        <td class="auto-style1">
+        </td>
+    </tr>
+         <tr>
+        <td>
         </td>
         <td>
+        </td>
+        <td class="auto-style1">
+        </td>
+    </tr>
+         <tr>
+        <td>
+        </td>
+        <td>
+           
+            <asp:LinkButton ID="LinkButton1" runat="server"  PostBackUrl="~/homepage.aspx">Home</asp:LinkButton>
+           
+        </td>
+        <td class="auto-style1">
         </td>
     </tr>
 </table>
     </form>
+  
 </body>
 </html>
