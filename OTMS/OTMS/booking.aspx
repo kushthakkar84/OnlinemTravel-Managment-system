@@ -25,36 +25,13 @@
         .auto-style3 {
             height: 19px;
         }
-        .auto-style4 {
-            width: 88px;
-        }
-        .auto-style5 {
-            height: 22px;
-            width: 88px;
-        }
-        .auto-style6 {
-            height: 19px;
-            width: 88px;
-        }
-        .auto-style7 {
-            height: 16px;
-            width: 88px;
-        }
         .btn {
             border: 2px solid #777;
 	border-radius: 10px;
 	outline: none;
      }
 
-        .auto-style8 {
-            height: 34px;
-        }
-        .auto-style9 {
-            width: 88px;
-            height: 34px;
-        }
-
-    </style>
+        </style>
 </head>
 <body class="theme">
     <form id="form1" runat="server">
@@ -63,19 +40,33 @@
         <th colspan="3">
             Booking</th>
     </tr>
+
+        <tr>
+        <td class="auto-style1">
+            P_ID</td>
+        <td class="auto-style1">
+            <asp:TextBox ID="pid" runat="server"></asp:TextBox>
+        </td>
+        
+    </tr>
+
+
     <tr>
-        <td>    P_ID</td>
+        <td>PackageName</td>
         <td>    
-            <asp:DropDownList ID="DropDownList1" runat="server">
-            </asp:DropDownList>
+            
+            <asp:TextBox ID="pkname" runat="server"  ReadOnly="true"></asp:TextBox>
+            
         </td>
         
     </tr>
     <tr>
         <td class="auto-style2">
-            Package_Name</td>
+            Category</td>
         <td class="auto-style2">
-            <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
+            
+            <asp:TextBox ID="ctg" runat="server" ReadOnly="true"></asp:TextBox>
+            
         </td>
         
     </tr>
@@ -84,24 +75,57 @@
             Description</td>
         <td class="auto-style3">
             
-            <asp:TextBox ID="TextBox2" runat="server"></asp:TextBox>
+            <asp:TextBox ID="des" runat="server" ReadOnly="true"></asp:TextBox>
             
         </td>
         
     </tr>
     <tr>
         <td class="auto-style1">
-            Journey Date</td>
+            Types</td>
         <td class="auto-style1">
-            <asp:TextBox ID="TextBox3" runat="server"></asp:TextBox>
+            <asp:TextBox ID="type" runat="server" ReadOnly="true"></asp:TextBox>
         </td>
         
     </tr>
         <tr>
         <td class="auto-style1">
+            Days</td>
+        <td class="auto-style1">
+            <asp:TextBox ID="day" runat="server" ReadOnly="true"></asp:TextBox>
+        </td>
+        </tr>
+        <tr>
+        <td class="auto-style1">
+            Amount</td>
+        <td class="auto-style1">
+            <asp:TextBox ID="amount" runat="server" ReadOnly="true"></asp:TextBox>
+        </td>
+        
+   
+    </tr>
+          <tr>
+        <td class="auto-style1">
+            Date</td>
+        <td class="auto-style1">
+            <asp:TextBox ID="date" Textmode="Date" runat="server"></asp:TextBox>
+        </td>
+        
+   
+    </tr>
+        <tr>
+        <td class="auto-style1">
             </td>
         <td class="auto-style1">
-            <asp:Button ID="Button1" runat="server" Text="Submit" />
+            <asp:Button ID="Button1" runat="server" Text="Submit" OnClick="Button1_Click" />
+        </td>
+        
+    </tr>
+         <tr>
+        <td class="auto-style1">
+            </td>
+        <td class="auto-style1">
+            <asp:Label ID="Label1" runat="server" Text=""></asp:Label>
         </td>
         
     </tr>

@@ -6,6 +6,13 @@
 <head runat="server">
     <title></title>
     <style type="text/css">
+        .label {
+color: #B4886B;
+font-weight: bold;
+display: block;
+width: 150px;
+float: left;
+}
         .theme{
             background-color:lightblue;
             color: green;
@@ -38,7 +45,7 @@
         </th>
     </tr>
     <tr>
-        <td>    Full Name</td>
+        <td class="label">    Full Name</td>
         <td>    
             <asp:TextBox ID="Fnm" runat="server"></asp:TextBox>
         </td>
@@ -47,7 +54,7 @@
         </td>
     </tr>
     <tr>
-        <td>
+        <td class="label">
             Username
         </td>
         <td>
@@ -59,7 +66,7 @@
         </td>
     </tr>
     <tr>
-        <td>
+        <td class="label">
             Password
         </td>
         <td>
@@ -71,7 +78,7 @@
         </td>
     </tr>
     <tr>
-        <td>
+        <td class="label">
             Confirm Password
         </td>
         <td>
@@ -83,7 +90,7 @@
         </td>
     </tr>
     <tr>
-        <td>
+        <td class="label">
             Email
         </td>
         <td>
@@ -97,7 +104,7 @@
         </td>
     </tr>
     <tr>
-        <td>    Gender</td>
+        <td class="label">    Gender</td>
         <td>   <asp:RadioButtonList ID="RadioButtonList1" runat="server">
             <asp:ListItem>Male</asp:ListItem>
                     <asp:ListItem>Female</asp:ListItem>
@@ -109,7 +116,7 @@
         <td class="auto-style1">    </td>
     </tr>
     <tr>
-        <td>    Country</td>
+        <td class="label">    Country</td>
         <td>    
             <asp:DropDownList ID="DropDownList1" runat="server">
                 <asp:ListItem>India</asp:ListItem>
@@ -123,7 +130,7 @@
         <td class="auto-style1">    </td>
     </tr>
     <tr>
-        <td>    State</td>
+        <td class="label">    State</td>
         <td>    
             <asp:DropDownList ID="DropDownList2" runat="server">
             </asp:DropDownList>
@@ -131,7 +138,7 @@
         <td class="auto-style1">    </td>
     </tr>
     <tr>
-        <td>    Zip Code</td>
+        <td class="label">    Zip Code</td>
         <td>    
             <asp:TextBox ID="TextBox2" runat="server"></asp:TextBox>
         </td>
@@ -140,7 +147,7 @@
         </td>
     </tr>
     <tr>
-        <td>    Age</td>
+        <td class="label">    Age</td>
         <td>    
             <asp:TextBox ID="Age" runat="server"></asp:TextBox>
         </td>
@@ -152,7 +159,7 @@
     <tr>
         <td>
         </td>
-        <td class="btn">
+        <td>
             <asp:Button Text="Submit" runat="server" ID="reg" OnClick="reg_Click"  />
         </td>
         <td class="auto-style1">

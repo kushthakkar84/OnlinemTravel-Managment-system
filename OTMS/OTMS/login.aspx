@@ -1,4 +1,5 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="login.aspx.cs" Inherits="OTMS.login" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="login.aspx.cs" Inherits="OTMS.login" %>
+
 
 
 
@@ -8,6 +9,14 @@
 <head runat="server">
     <title></title>
     <style type="text/css">
+         .label {
+color: #B4886B;
+font-weight: bold;
+font-size: 25px;
+display: block;
+width: 150px;
+float: left;
+}
         .auto-style2 {
             height: 22px;
             
@@ -40,37 +49,40 @@
 </head>
 <body style="width: 796px; height: 836px" class="theme">
     <form id="form1" runat="server" >
-    <table border="0" cellpadding="5" cellspacing="5">
+       
+        
+        <table border="0" cellpadding="5" cellspacing="5">
     <tr>
         <th colspan="3">
-           <h2> Login</h2></th>
+           <h1> Login</h1></th>
     </tr>
     <tr>
-        <td class="auto-style3">    Username</td>
+        <td class="auto-style3","label">    Username</td>
         <td class="auto-style2">    
-            <asp:TextBox ID="Username" runat="server" Height="20px" Width="224px"></asp:TextBox>
+            <asp:TextBox ID="txtUsername" runat="server" Height="20px" Width="224px"></asp:TextBox>
         </td>
         <td>    
-            <asp:RequiredFieldValidator ID="RequiredFieldValidator1" ForeColor="Red" runat="server" ErrorMessage="Required" ControlToValidate="Username"></asp:RequiredFieldValidator>
+            <asp:RequiredFieldValidator ID="RequiredFieldValidator1" ForeColor="Red" runat="server" ErrorMessage="Required" ControlToValidate="txtUsername"></asp:RequiredFieldValidator>
         </td>
     </tr>
     <tr>
-        <td class="auto-style3">
+        <td class="auto-style3","label">
             Password</td>
         <td class="auto-style2">
-            <asp:TextBox ID="Password" runat="server" type="password" Height="19px" Width="219px"></asp:TextBox>
+            <asp:TextBox ID="txtPassword" runat="server" type="password" Height="19px" Width="219px"></asp:TextBox>
         </td>
         <td>
-            <asp:RequiredFieldValidator ID="RequiredFieldValidator2" ForeColor="Red"  runat="server" ErrorMessage="password should not be empty" ControlToValidate="Password"></asp:RequiredFieldValidator>
+            <asp:RequiredFieldValidator ID="RequiredFieldValidator2" ForeColor="Red"  runat="server" ErrorMessage="password should not be empty" ControlToValidate="txtPassword"></asp:RequiredFieldValidator>
         </td>
     </tr>
     
     
     <tr>
         <td class="auto-style3">    
-            <asp:CheckBox ID="CheckBox1" runat="server" Text="Remember Me" />
         </td>
-        <td></td>
+        <td>
+            <asp:Label ID="Label1" runat="server" Text="" ForeColor="Red" Font-Bold="true"></asp:Label>
+        </td>
         <td>    </td>
     </tr>
         
@@ -78,10 +90,10 @@
         <td class="auto-style3">
         </td>
         <td>
-            <asp:Button Text="Submit" runat="server"  />
+            <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Button" />
         </td>
         <td>
-        </td>
+            &nbsp;</td>
     </tr>
 </table>
     </form>

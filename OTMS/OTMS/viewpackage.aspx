@@ -10,7 +10,7 @@
   text-decoration: underline;
   font-weight: bold;
   margin: auto;
-    width: 30%;
+    width: 70%;
     border: 3px solid green;
     padding: 10px;
         }
@@ -20,7 +20,7 @@
         .auto-style2 {
             height: 22px;
         }
-        .auto-style3 {
+
             height: 19px;
         }
         .auto-style4 {
@@ -81,98 +81,32 @@
         <th colspan="3">
             Packages</th>
     </tr>
-    <tr>
-        <td>    1</td>
-        <td>    
-            abc</td>
-        <td class="auto-style4">    
-            <asp:Image ID="Image1" runat="server" Height="45px" Width="58px" ImageUrl="~/m1.jpg" />
-        </td>
-        <td class="auto-style10">
-            <asp:LinkButton ID="LinkButton1" runat="server">VIEW</asp:LinkButton>
-        </td>
-    </tr>
-    <tr>
-        <td class="auto-style2">
-            2</td>
-        <td class="auto-style2">
-            bcd</td>
-        <td class="auto-style5">
-            <asp:Image ID="Image2" Height="45px" Width="58px" runat="server" />
-            </td>
-        <td class="auto-style11">
-            <asp:LinkButton ID="LinkButton2" runat="server">VIEW</asp:LinkButton>
-        </td>
-
-    </tr>
-    <tr>
-        <td class="auto-style3">
-            3</td>
-        <td class="auto-style3">
-            
-            cde</td>
-        <td class="auto-style6">
-            <asp:Image ID="Image3" Height="45px" Width="58px" runat="server" />
-        </td>
-        <td class="auto-style12">
-            <asp:LinkButton ID="LinkButton3" runat="server">VIEW</asp:LinkButton>
-        </td>
-    </tr>
-    <tr>
-        <td class="auto-style1">
-            4</td>
-        <td class="auto-style1">
-            def</td>
-        <td class="auto-style7">
-            <asp:Image ID="Image4" Height="45px" Width="58px" runat="server" />
-            </td>
-        <td class="auto-style13">
-            <asp:LinkButton ID="LinkButton4" runat="server">VIEW</asp:LinkButton>
-        </td>
-    </tr>
-    <tr>
-        <td class="auto-style8">
-            5</td>
-        <td class="auto-style8">
-            efg</td>
-        <td class="auto-style9">
-            <asp:Image ID="Image5" Height="45px" Width="58px" runat="server" />
-            </td>
-        <td class="auto-style14">
-            <asp:LinkButton ID="LinkButton5" runat="server">VIEW</asp:LinkButton>
-        </td>
-    </tr>
     
-    <tr>
-        <td>    6</td>
-        <td>    
-            fgh</td>
-        <td class="auto-style4">    
-            <asp:Image ID="Image6" Height="45px" Width="58px" runat="server" />
-        </td>
-        <td class="auto-style10">    
-            <asp:LinkButton ID="LinkButton6" runat="server">VIEW</asp:LinkButton>
-        </td>
-    </tr>
-        
-    <tr>
-        <td>
-            7</td>
-        <td>
-            ghi</td>
-        <td class="auto-style4">
-            <asp:Image ID="Image7" Height="45px" Width="58px" runat="server" />
-        </td>
-        <td>
-            <asp:LinkButton ID="LinkButton7" runat="server">VIEW</asp:LinkButton>
-            <br />
-            </td>
-    </tr>
+
+        <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
+
+
 </table>
         <br />
-        <asp:GridView ID="GridView1" runat="server" DataSourceID="SqlDataSource1">
+        <asp:GridView ID="GridView1" runat="server" DataSourceID="SqlDataSource1" AutoGenerateColumns="False" DataKeyNames="p_id" OnRowCommand="GridView1_RowCommand">
+            <Columns>
+                <asp:BoundField DataField="PackageName" HeaderText="PackageName" SortExpression="PackageName" />
+                <asp:BoundField DataField="Category" HeaderText="Category" SortExpression="Category" />
+                <asp:BoundField DataField="Description" HeaderText="Description" SortExpression="Description" />
+                <asp:BoundField DataField="Types" HeaderText="Types" SortExpression="Types" />
+                <asp:BoundField DataField="Days" HeaderText="Days" SortExpression="Days" />
+                <asp:BoundField DataField="Amount" HeaderText="Amount" SortExpression="Amount" />
+                <asp:BoundField DataField="p_id" HeaderText="p_id" InsertVisible="False" ReadOnly="True" SortExpression="p_id" />
+                
+                 <asp:TemplateField HeaderText="Action">
+                     <ItemTemplate>
+                         <asp:LinkButton ID="LinkButton1" runat="server" Text="Book"   CommandName="booking" CommandArgument='<%# Eval("p_id") %>' ></asp:LinkButton>
+                     </ItemTemplate>
+                </asp:TemplateField>
+                
+                 </Columns>
         </asp:GridView>
-        <asp:SqlDataSource ID="SqlDataSource1" runat="server"></asp:SqlDataSource>
+        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT * FROM [packagedetails]"></asp:SqlDataSource>
     </form>
 </body>
 </html>
