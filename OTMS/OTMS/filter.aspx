@@ -22,7 +22,10 @@
         <br />
         <asp:LinkButton ID="LinkButton3" runat="server" PostBackUrl="~/bookingfilter.aspx">Booking</asp:LinkButton>
     
+        <br />
+    
     </div>
+        <br />
     </form>
 </body>
 </html>

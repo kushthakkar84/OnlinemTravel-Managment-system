@@ -24,10 +24,12 @@ namespace OTMS
             SqlCommand command = new SqlCommand();
             command.Connection = conn;
             conn.Open();
-            command.CommandText = "insert into Feedback (Rating,comments) values (@rat,@cmt)";
-            command.Parameters.AddWithValue("@Rating", Rating.SelectedItem.Text.ToString());
-            command.Parameters.AddWithValue("@comments", comments.Text.ToString());
+            command.CommandText = "insert into Feedback (Rating,comments,p_id) values (@rat,@cmt,@pid)";
+            command.Parameters.AddWithValue("@rat", Rating.SelectedItem.Text.ToString());
+            command.Parameters.AddWithValue("@cmt", comments.Text.ToString());
+            command.Parameters.AddWithValue("@pid", DropDownList1.Text.ToString());
             command.ExecuteNonQuery();
+            Label1.Text = "Thank You For Feedback";
 
         }
     }

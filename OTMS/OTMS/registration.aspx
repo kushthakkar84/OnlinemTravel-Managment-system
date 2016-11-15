@@ -129,14 +129,7 @@ float: left;
         </td>
         <td class="auto-style1">    </td>
     </tr>
-    <tr>
-        <td class="label">    State</td>
-        <td>    
-            <asp:DropDownList ID="DropDownList2" runat="server">
-            </asp:DropDownList>
-        </td>
-        <td class="auto-style1">    </td>
-    </tr>
+    
     <tr>
         <td class="label">    Zip Code</td>
         <td>    
@@ -184,8 +177,6 @@ float: left;
         <td>
         </td>
         <td>
-           
-            <asp:LinkButton ID="LinkButton1" runat="server"  PostBackUrl="~/homepage.aspx">Home</asp:LinkButton>
            
         </td>
         <td class="auto-style1">

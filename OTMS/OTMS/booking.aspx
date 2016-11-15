@@ -115,6 +115,19 @@
     </tr>
         <tr>
         <td class="auto-style1">
+            Payment Type</td>
+        <td class="auto-style1">
+            <asp:RadioButtonList ID="RadioButtonList1" runat="server">
+                <asp:ListItem>Check</asp:ListItem>
+                <asp:ListItem>Demand Draft</asp:ListItem>
+                <asp:ListItem>Cash on Arrival</asp:ListItem>
+            </asp:RadioButtonList>
+        </td>
+        
+   
+    </tr>
+        <tr>
+        <td class="auto-style1">
             </td>
         <td class="auto-style1">
             <asp:Button ID="Button1" runat="server" Text="Submit" OnClick="Button1_Click" />

@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
+
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
@@ -27,7 +27,9 @@ namespace OTMS
 
                 SqlConnection conn = new SqlConnection(connectionString);
                 SqlCommand command = new SqlCommand();
+                
                 command.Connection = conn;
+                
                 conn.Open();
                 command.CommandText = "insert into customer (user_name,gender,full_name,email,country,zip_code,city,Age,password) values (@username,@gender,@full_name,@email,@country,@zip_code,@city,@Age,@password)";
                 command.Parameters.AddWithValue("@username", TextBox1.Text.ToString());
@@ -37,14 +39,16 @@ namespace OTMS
                 command.Parameters.AddWithValue("@country", DropDownList1.SelectedItem.Text.ToString());
                 command.Parameters.AddWithValue("@zip_code", TextBox2.Text.ToString());
                 //  command.Parameters.AddWithValue("@c_id", C_ID.Text);
-                command.Parameters.AddWithValue("@city", "sdfsdf");
+                command.Parameters.AddWithValue("@city","Nadiad");
                 command.Parameters.AddWithValue("@Age", Age.Text.ToString());
                 command.Parameters.AddWithValue("@password", txtPassword.Text.ToString());
+                
                 /*command.Parameters.AddWithValue("@p_id", P_ID.Text.ToString());*/
                 int num_row = command.ExecuteNonQuery();
+                
                 if (num_row > 0)
                 {
-                    Response.Redirect("~/homepage.aspx");
+                    Response.Redirect("~/login.aspx");
                 }
                 else
                 {

@@ -64,9 +64,11 @@
     
     
     <tr>
-        <td>    P_ID</td>
+        <td>    PackageName</td>
         <td class="auto-style2">    
-            <asp:TextBox ID="p_id" runat="server" Height="16px" Width="263px"></asp:TextBox>
+            <asp:DropDownList ID="DropDownList1" runat="server" DataSourceID="SqlDataSource1" DataTextField="PackageName" DataValueField="PackageName">
+            </asp:DropDownList>
+            <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT [PackageName] FROM [packagedetails]"></asp:SqlDataSource>
         </td>
         <td>    </td>
     </tr>
@@ -76,6 +78,10 @@
         </td>
         <td>
             <asp:Button ID="Button1" runat="server" Text="Button" OnClick="Button1_Click" />
+            <br />
+            <br />
+            <br />
+            <asp:Label ID="Label1" runat="server"  ForeColor="#0000ff" Font-Bold="true" Text=""></asp:Label>
         </td>
         <td>
         </td>

@@ -79,16 +79,52 @@
     <table border="0" cellpadding="5" cellspacing="5">
     <tr>
         <th colspan="3">
-            Packages</th>
+            <h1>Packages</h1>
+            <p>&nbsp;</p>
+            <p>
+                <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
+            </p>
+            <p>
+                <asp:Button ID="Button1" runat="server" Text="Button" />
+            </p>
+            <p>
+                <asp:GridView ID="GridView2" runat="server" AutoGenerateColumns="False" DataKeyNames="p_id" DataSourceID="SqlDataSource2" BackColor="White" BorderColor="#3366CC" BorderStyle="None" BorderWidth="1px" CellPadding="4">
+                    <Columns>
+                        <asp:BoundField DataField="PackageName" HeaderText="PackageName" SortExpression="PackageName" />
+                        <asp:BoundField DataField="Category" HeaderText="Category" SortExpression="Category" />
+                        <asp:BoundField DataField="Description" HeaderText="Description" SortExpression="Description" />
+                        <asp:BoundField DataField="Types" HeaderText="Types" SortExpression="Types" />
+                        <asp:BoundField DataField="Days" HeaderText="Days" SortExpression="Days" />
+                        <asp:BoundField DataField="Amount" HeaderText="Amount" SortExpression="Amount" />
+                        <asp:BoundField DataField="p_id" HeaderText="p_id" InsertVisible="False" ReadOnly="True" SortExpression="p_id" />
+                    </Columns>
+                    <FooterStyle BackColor="#99CCCC" ForeColor="#003399" />
+                    <HeaderStyle BackColor="#003399" Font-Bold="True" ForeColor="#CCCCFF" />
+                    <PagerStyle BackColor="#99CCCC" ForeColor="#003399" HorizontalAlign="Left" />
+                    <RowStyle BackColor="White" ForeColor="#003399" />
+                    <SelectedRowStyle BackColor="#009999" Font-Bold="True" ForeColor="#CCFF99" />
+                    <SortedAscendingCellStyle BackColor="#EDF6F6" />
+                    <SortedAscendingHeaderStyle BackColor="#0D4AC4" />
+                    <SortedDescendingCellStyle BackColor="#D6DFDF" />
+                    <SortedDescendingHeaderStyle BackColor="#002876" />
+                </asp:GridView>
+                <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT * FROM [packagedetails] WHERE ([Description] LIKE '%' +@Description+ '%')">
+                    <SelectParameters>
+                        <asp:ControlParameter ControlID="TextBox1" Name="Description" PropertyName="Text" Type="String" />
+                    </SelectParameters>
+                </asp:SqlDataSource>
+            </p>
+            <p>&nbsp;</p>
+        </th>
     </tr>
     
 
-        <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
+        <asp:Label ID="Label1" runat="server" Text=""></asp:Label>
 
 
 </table>
         <br />
-        <asp:GridView ID="GridView1" runat="server" DataSourceID="SqlDataSource1" AutoGenerateColumns="False" DataKeyNames="p_id" OnRowCommand="GridView1_RowCommand">
+        <asp:GridView ID="GridView1" runat="server" DataSourceID="SqlDataSource1" AutoGenerateColumns="False" DataKeyNames="p_id" OnRowCommand="GridView1_RowCommand" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="3">
             <Columns>
                 <asp:BoundField DataField="PackageName" HeaderText="PackageName" SortExpression="PackageName" />
                 <asp:BoundField DataField="Category" HeaderText="Category" SortExpression="Category" />
@@ -105,6 +141,15 @@
                 </asp:TemplateField>
                 
                  </Columns>
+            <FooterStyle BackColor="White" ForeColor="#000066" />
+            <HeaderStyle BackColor="#006699" Font-Bold="True" ForeColor="White" />
+            <PagerStyle BackColor="White" ForeColor="#000066" HorizontalAlign="Left" />
+            <RowStyle ForeColor="#000066" />
+            <SelectedRowStyle BackColor="#669999" Font-Bold="True" ForeColor="White" />
+            <SortedAscendingCellStyle BackColor="#F1F1F1" />
+            <SortedAscendingHeaderStyle BackColor="#007DBB" />
+            <SortedDescendingCellStyle BackColor="#CAC9C9" />
+            <SortedDescendingHeaderStyle BackColor="#00547E" />
         </asp:GridView>
         <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT * FROM [packagedetails]"></asp:SqlDataSource>
     </form>

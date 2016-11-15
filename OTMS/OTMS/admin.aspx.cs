@@ -40,7 +40,7 @@ namespace OTMS
 
             if (reader.HasRows)
             {
-                Response.Redirect("package.aspx");
+                Response.Redirect("action.aspx");
             }
             else
             {

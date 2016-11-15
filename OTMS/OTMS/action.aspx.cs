@@ -7,14 +7,15 @@ using System.Web.UI.WebControls;
 
 namespace OTMS
 {
-    public partial class homepage : System.Web.UI.Page
+    public partial class action : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (Session["username"] == null)
-            {
-                Response.Redirect("login.aspx");
-            }
+
         }
-    }
+        protected void LinkButton2_Click(object sender, EventArgs e)
+        {
+
+        }
+}
 }

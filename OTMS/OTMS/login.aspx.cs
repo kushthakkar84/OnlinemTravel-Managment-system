@@ -25,9 +25,6 @@ namespace OTMS
             string strSelect = "SELECT * FROM customer WHERE user_name = @Username AND password = @Password";
 
 
-
-
-
             SqlConnection con = new SqlConnection(strCon);
             con.Open();
             SqlCommand cmd = new SqlCommand(strSelect, con);
@@ -40,6 +37,7 @@ namespace OTMS
 
             if (reader.HasRows)
             {
+                Session["username"] = txtUsername.Text ;
                 Response.Redirect("homepage.aspx");
             }
             else

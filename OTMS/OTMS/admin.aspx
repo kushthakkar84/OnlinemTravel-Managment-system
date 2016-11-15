@@ -51,7 +51,7 @@ float: left;
         <table border="0" cellpadding="5" cellspacing="5">
     <tr>
         <th colspan="3">
-           <h1> Login</h1></th>
+           <h1> Admin Login</h1></th>
     </tr>
     <tr>
         <td class="auto-style3","label">    Username</td>

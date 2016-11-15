@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
-using System.Linq;
+
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
@@ -53,10 +53,12 @@ namespace OTMS
             
             SqlConnection conn = new SqlConnection(connectionString);
             SqlCommand command = new SqlCommand();
+          //  SqlCommand cmd = new SqlCommand();
             command.Connection = conn;
+            //cmd.Connection = conn;
             conn.Open();
-            command.CommandText = "insert into booking (packageID,PackageName,Category,Description,Types,Days,Amount,Date,BookingID) values (@username,@gender,@full_name,@email,@country,@zip_code,@city,@Age,@c_id)";
-            command.Parameters.AddWithValue("@username", pid.Text);
+            command.CommandText = "insert into booking (packageID,PackageName,Category,Description,Types,Days,Amount,Date,BookingID,user_name,payment) values (@packid,@gender,@full_name,@email,@country,@zip_code,@city,@Age,@c_id,@session,@pay)";
+            command.Parameters.AddWithValue("@packid", pid.Text);
             command.Parameters.AddWithValue("@gender", pkname.Text);
             command.Parameters.AddWithValue("@full_name", ctg.Text);
             command.Parameters.AddWithValue("@email", des.Text);
@@ -66,7 +68,17 @@ namespace OTMS
             command.Parameters.AddWithValue("@city", amount.Text);
             command.Parameters.AddWithValue("@Age", date.Text);
             command.Parameters.AddWithValue("@c_id", rand);
-            command.ExecuteNonQuery();
+            command.Parameters.AddWithValue("@pay", RadioButtonList1.Text.ToString());
+            //cmd.CommandText = "insert into booking (user_name) values (@Username)";
+            command.Parameters.AddWithValue("@session", Session["username"]);
+            SqlDataReader rdr1 = command.ExecuteReader();
+            rdr1.Close();
+
+            //SqlDataReader rdr2 = cmd.ExecuteReader();
+           // rdr2.Close();
+
+
+            //cmd.ExecuteNonQuery();
             Label1.Text = "Booking Successful....";
             Response.Redirect("bookingstatus.aspx");
 

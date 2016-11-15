@@ -90,10 +90,14 @@ float: left;
         <td class="auto-style3">
         </td>
         <td>
-            <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Button" />
+            <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Login" />
         </td>
         <td>
-            &nbsp;</td>
+            <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/registration.aspx">SignUp</asp:HyperLink>
+            <br />
+            <br />
+            <asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="~/admin.aspx">Are You Admin?</asp:HyperLink>
+        </td>
     </tr>
 </table>
     </form>
