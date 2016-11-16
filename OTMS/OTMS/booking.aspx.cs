@@ -57,20 +57,29 @@ namespace OTMS
             command.Connection = conn;
             //cmd.Connection = conn;
             conn.Open();
-            command.CommandText = "insert into booking (packageID,PackageName,Category,Description,Types,Days,Amount,Date,BookingID,user_name,payment) values (@packid,@gender,@full_name,@email,@country,@zip_code,@city,@Age,@c_id,@session,@pay)";
+          /*  decimal a,b,c;
+            bool isAValid=decimal.TryParse(amount.Text, out a);
+            bool isBValid=decimal.TryParse(TextBox1.Text, out b);
+            if(isAValid && isBValid)
+            {
+                c=a*b;
+            }*/
+
+            command.CommandText = "insert into booking (packageID,PackageName,Category,Description,Types,Days,Amount,Date,BookingID,user_name,payment,passenger) values (@packid,@gender,@full_name,@email,@country,@zip_code,@city,@Age,@c_id,@session,@pay,@nop)";
             command.Parameters.AddWithValue("@packid", pid.Text);
             command.Parameters.AddWithValue("@gender", pkname.Text);
             command.Parameters.AddWithValue("@full_name", ctg.Text);
             command.Parameters.AddWithValue("@email", des.Text);
             command.Parameters.AddWithValue("@country", type.Text);
             command.Parameters.AddWithValue("@zip_code", day.Text);
-            
-            command.Parameters.AddWithValue("@city", amount.Text);
+
+            command.Parameters.AddWithValue("@city", Int32.Parse(amount.Text) * Int32.Parse(TextBox1.Text));
             command.Parameters.AddWithValue("@Age", date.Text);
             command.Parameters.AddWithValue("@c_id", rand);
             command.Parameters.AddWithValue("@pay", RadioButtonList1.Text.ToString());
             //cmd.CommandText = "insert into booking (user_name) values (@Username)";
             command.Parameters.AddWithValue("@session", Session["username"]);
+            command.Parameters.AddWithValue("@nop", TextBox1.Text);
             SqlDataReader rdr1 = command.ExecuteReader();
             rdr1.Close();
 

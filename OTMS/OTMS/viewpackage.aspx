@@ -85,7 +85,7 @@
                 <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
             </p>
             <p>
-                <asp:Button ID="Button1" runat="server" Text="Button" />
+                <asp:Button ID="Button1" runat="server" Text="Search" />
             </p>
             <p>
                 <asp:GridView ID="GridView2" runat="server" AutoGenerateColumns="False" DataKeyNames="p_id" DataSourceID="SqlDataSource2" BackColor="White" BorderColor="#3366CC" BorderStyle="None" BorderWidth="1px" CellPadding="4">

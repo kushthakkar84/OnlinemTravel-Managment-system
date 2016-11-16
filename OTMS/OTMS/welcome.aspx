@@ -7,7 +7,7 @@
     
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title>How to make an Image Slider in ASP.NET</title>
+    <title>welcome to travel Managment</title>
     <style type="text/css">
         .button {
             border-radius: 4px 4px 4px 4px;
@@ -67,7 +67,7 @@
                     <table>
                         <tbody><tr>
                             <td class="button">
-                                <asp:Button ID="Button1" runat="server" Text="Register" />
+                                <asp:Button ID="Button1" runat="server" Text="Register" PostBackUrl="~/registration.aspx" />
 &nbsp;</td>
                             <td>
                                 <!-- We will use AdRotator control for creating an image slider in asp.net
@@ -77,7 +77,7 @@
                                 <a id="AdRotator1" target="_top"><img src="Smiely.jpg"></a>
                             </td>
                             <td class="button">
-                                <asp:Button ID="Button2" runat="server" Text="Login" />
+                                <asp:Button ID="Button2" runat="server" Text="Login" PostBackUrl="~/login.aspx" />
 &nbsp;</td>
                         </tr>
                     </tbody></table>

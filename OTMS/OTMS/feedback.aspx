@@ -77,11 +77,19 @@
         <td>
         </td>
         <td>
-            <asp:Button ID="Button1" runat="server" Text="Button" OnClick="Button1_Click" />
+            <asp:Button ID="Button1" runat="server" Text="Submit" OnClick="Button1_Click" />
             <br />
             <br />
             <br />
             <asp:Label ID="Label1" runat="server"  ForeColor="#0000ff" Font-Bold="true" Text=""></asp:Label>
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <asp:LinkButton ID="LinkButton1" runat="server" PostBackUrl="~/homepage.aspx">Home</asp:LinkButton>
+            <br />
+            <asp:LinkButton ID="LinkButton2" runat="server" PostBackUrl="~/welcome.aspx">Logout</asp:LinkButton>
         </td>
         <td>
         </td>

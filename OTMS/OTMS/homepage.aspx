@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="homepage.aspx.cs" Inherits="OTMS.homepage" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="homepage.aspx.cs" Inherits="OTMS.homepage" %>
 
 <!DOCTYPE html>
 
@@ -11,13 +11,6 @@
     <div>
     
         <asp:Panel ID="Panel1" runat="server">
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
             <br />
             <center> <h1><b>Online Travel Managment System<b></b></h1></center>
             <asp:Image ID="Image1" IamgeUrl="5.jpg" runat="server" Height="250px" Width="1200px" ImageUrl="5.jpg" />
@@ -36,6 +29,7 @@
             <br />
             <br />
             <br />
+            </b>
         </asp:Panel>
         <asp:Panel ID="Panel2" runat="server">
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;

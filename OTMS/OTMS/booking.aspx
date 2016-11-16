@@ -97,7 +97,8 @@
         </tr>
         <tr>
         <td class="auto-style1">
-            Amount</td>
+            Amount<br />
+            (1 person)</td>
         <td class="auto-style1">
             <asp:TextBox ID="amount" runat="server" ReadOnly="true"></asp:TextBox>
         </td>
@@ -109,6 +110,15 @@
             Date</td>
         <td class="auto-style1">
             <asp:TextBox ID="date" Textmode="Date" runat="server"></asp:TextBox>
+        </td>
+        
+   
+    </tr>
+        <tr>
+        <td class="auto-style1">
+            No. of Person</td>
+        <td class="auto-style1">
+            <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
         </td>
         
    

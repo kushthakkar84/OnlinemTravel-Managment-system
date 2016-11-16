@@ -148,7 +148,10 @@
             <br />
             <br />
             <asp:Label ID="Label1" runat="server" Text=""></asp:Label>
-        </td>
+            <br />
+            <br />
+            <asp:LinkButton ID="LinkButton1" runat="server" PostBackUrl="~/admin.aspx">Logout</asp:LinkButton>
+&nbsp;</td>
         <td>
             &nbsp;</td>
     </tr>

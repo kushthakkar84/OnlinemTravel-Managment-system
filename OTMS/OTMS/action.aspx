@@ -24,6 +24,9 @@
         <asp:LinkButton ID="LinkButton1" runat="server" PostBackUrl="~/package.aspx"><h2>Modify Package</h2></asp:LinkButton>
         <br />
         <asp:LinkButton ID="LinkButton2" runat="server" PostBackUrl="~/income.aspx" ><h2>Income</h2></asp:LinkButton>
+        <br />
+        <br />
+        <br />
     </div>
     </form>
 </body>

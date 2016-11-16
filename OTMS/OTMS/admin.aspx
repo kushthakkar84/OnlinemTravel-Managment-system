@@ -87,10 +87,11 @@ float: left;
         <td class="auto-style3">
         </td>
         <td>
-            <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Button" />
+            <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Login" />
         </td>
         <td>
-            &nbsp;</td>
+            <asp:LinkButton ID="LinkButton1" runat="server" PostBackUrl="~/login.aspx">User Login</asp:LinkButton>
+        </td>
     </tr>
 </table>
     </form>
